@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ABResponse<T:Codable>: Codable {
+public class ABResponse<T:Codable>: Codable {
     private(set) var success : Bool!
     private(set) var data        : T?
     
@@ -17,7 +17,7 @@ class ABResponse<T:Codable>: Codable {
         case data    = "data"
     }
     
-    required init(from decoder: Decoder) throws {
+    required public init(from decoder: Decoder) throws {
         let values  = try decoder.container(keyedBy: CodingKeys.self)
         success         = try values.decodeIfPresent(Bool.self, forKey : .success)
         data        = try? values.decodeIfPresent(T.self, forKey : .data)

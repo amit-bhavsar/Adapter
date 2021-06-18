@@ -11,7 +11,7 @@ import Alamofire
 import Combine
 import Dispatch
 
-final class Webservice: WebServiceProtocol
+public final class Webservice: WebServiceProtocol
 {
     // Custom header field
     var header = HTTPHeaders(["Content-Type":"application/json"])
@@ -19,7 +19,7 @@ final class Webservice: WebServiceProtocol
     private var sessionManager : Networking
     private let cancelBag = CancelBag()
     
-    init(sessionManager : Networking = AlamofireNetwork())
+    public init(sessionManager : Networking = AlamofireNetwork())
     {
         self.sessionManager = sessionManager
     }
@@ -44,7 +44,7 @@ final class Webservice: WebServiceProtocol
     
     
     @discardableResult
-    func call<T: Codable>(api route: Router, type: T.Type) -> AnyPublisher<T?, WebError>
+    public func call<T: Codable>(api route: Router, type: T.Type) -> AnyPublisher<T?, WebError>
     {
         /*
         if no internet

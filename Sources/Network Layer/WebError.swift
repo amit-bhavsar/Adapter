@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum WebError: Error {
+public enum WebError: Error {
     
     /// Throws when server don't give any response
     case noData

@@ -9,7 +9,7 @@
 import Foundation
 import Alamofire
 
-protocol Routable {
+public protocol Routable {
     var path        : String { get }
     var method      : HTTPMethod { get }
     var parameters  : Parameters? { get }
@@ -17,17 +17,17 @@ protocol Routable {
     var isCachable  : Bool { get }
 }
 
-enum Router: Routable, Equatable, Hashable {
+public enum Router: Routable, Equatable, Hashable {
     
     case movies
     
-    static func ==(lhs: Router, rhs: Router) -> Bool {
+    public static func ==(lhs: Router, rhs: Router) -> Bool {
         return lhs.path == rhs.path
     }
 }
 
 extension Router {
-    var path: String {
+    public var path: String {
         var endPoint = ""
         
         switch self {
@@ -40,19 +40,19 @@ extension Router {
 }
 
 extension Router {
-    var method: HTTPMethod {
+    public var method: HTTPMethod {
         return .get
     }
 }
 
 extension Router {
-    var parameters: Parameters? {
+    public var parameters: Parameters? {
         return nil
     }
 }
 
 extension Router {
-    var dataKey: String? {
+    public var dataKey: String? {
         switch self {
         case .movies:
             return "results"
@@ -61,7 +61,7 @@ extension Router {
 }
 
 extension Router {
-    var isCachable: Bool {
+    public var isCachable: Bool {
         return true
     }
 }

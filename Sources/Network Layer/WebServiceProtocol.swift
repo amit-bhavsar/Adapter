@@ -9,7 +9,7 @@
 import Foundation
 import Combine
 
-protocol WebServiceProtocol
+public protocol WebServiceProtocol
 {
     @discardableResult
     func call<T: Codable>(api route: Router, type: T.Type) -> AnyPublisher<T?, WebError>

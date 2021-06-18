@@ -7,18 +7,18 @@
 
 import Foundation
 
-class Interactor
+open class Interactor
 {
-    var webService : WebServiceProtocol
-    let cancelBag = CancelBag()
+    public var webService : WebServiceProtocol
+    public let cancelBag = CancelBag()
     
-    init(webService : WebServiceProtocol = Webservice())
+    public init(webService : WebServiceProtocol = Webservice())
     {
         self.webService = webService
     }
     
     
-    func call<T: Codable>(api route: Router, type: T.Type, completion: @escaping (Resultable<T>) -> Void)
+    public func call<T: Codable>(api route: Router, type: T.Type, completion: @escaping (Resultable<T>) -> Void)
     {
         webService.call(api: route, type: ABResponse<T>.self).sinkResult { (result) in
             switch result {

@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol StateFul
+public protocol StateFul
 {
     associatedtype ViewState
     var state: ViewState { get set }

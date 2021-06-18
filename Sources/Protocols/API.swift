@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol API
+public protocol API
 {
     associatedtype Interactor
     var interactor: Interactor { get set }

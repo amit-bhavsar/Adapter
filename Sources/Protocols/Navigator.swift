@@ -8,13 +8,13 @@
 import Foundation
 import SwiftUI
 
-protocol DestinationProtocol
+public protocol DestinationProtocol
 {
     associatedtype Body : View
     @ViewBuilder var view: Self.Body { get }
 }
 
-protocol Navigator
+public protocol Navigator
 {
     associatedtype DestinationType where DestinationType : DestinationProtocol
     associatedtype Body : View
@@ -25,14 +25,14 @@ protocol Navigator
 
 extension View
 {
-    func navigate<V>(_ view: V) -> some View where V : View {
+    public func navigate<V>(_ view: V) -> some View where V : View {
         return NavigationLink(destination: view) {
             self
         }
     }
     
     
-    func navigate<V>(_ destination: V) -> some View where V : DestinationProtocol {
+    public func navigate<V>(_ destination: V) -> some View where V : DestinationProtocol {
         return NavigationLink(destination: destination.view) {
             self
         }

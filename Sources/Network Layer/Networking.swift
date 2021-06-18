@@ -9,7 +9,7 @@
 import Foundation
 import Alamofire
 
-protocol Networking
+public protocol Networking
 {
     @discardableResult
     func request( _ url : URLConvertible, method : HTTPMethod, parameters : Parameters?, encoding : ParameterEncoding, headers : HTTPHeaders?) -> NetworkingRequest
@@ -17,7 +17,7 @@ protocol Networking
     func cancelAllRequest()
 }
 
-protocol NetworkingRequest
+public protocol NetworkingRequest
 {
     @discardableResult
     func responseJSON(completionHandler : @escaping (AFDataResponse<Any>) -> Void) -> Self
@@ -33,10 +33,10 @@ protocol NetworkingRequest
 }
 
 
-final class AlamofireNetwork : Networking
+public final class AlamofireNetwork : Networking
 {
     private let alamofireSessionManager : Session
-    static var configuration : URLSessionConfiguration!
+    public static var configuration : URLSessionConfiguration!
     {
         let config = URLSessionConfiguration.default
         config.timeoutIntervalForResource = 600
@@ -44,14 +44,14 @@ final class AlamofireNetwork : Networking
         return config
     }
     
-    init(alamofireSessionManager : Session = Session(configuration : AlamofireNetwork.configuration))
+    public init(alamofireSessionManager : Session = Session(configuration : AlamofireNetwork.configuration))
     {
         self.alamofireSessionManager = alamofireSessionManager
     }
     
     
     // MARK: - Networking
-    func request(
+    public func request(
         _ url : URLConvertible,
         method : HTTPMethod,
         parameters : Parameters?,
@@ -64,7 +64,7 @@ final class AlamofireNetwork : Networking
     }
     
     
-    func cancelAllRequest()
+    public func cancelAllRequest()
     {
         alamofireSessionManager.session.getTasksWithCompletionHandler { (dataTasks, uploadTasks, downloadTasks) in
             dataTasks.forEach { $0.cancel() }
@@ -84,7 +84,7 @@ public class AlamofireNetworkRequest : NetworkingRequest
     }
     
     @discardableResult
-    func responseJSON(completionHandler : @escaping (AFDataResponse<Any>) -> Void) -> Self
+    public func responseJSON(completionHandler : @escaping (AFDataResponse<Any>) -> Void) -> Self
     {
         alamofireRequest.responseJSON(completionHandler : completionHandler)
         return self
@@ -92,7 +92,7 @@ public class AlamofireNetworkRequest : NetworkingRequest
     
     
     @discardableResult
-    func responseData(completionHandler : @escaping (AFDataResponse<Data>) -> Void) -> Self
+    public func responseData(completionHandler : @escaping (AFDataResponse<Data>) -> Void) -> Self
     {
         alamofireRequest.responseData(completionHandler : completionHandler)
         return self
@@ -100,14 +100,14 @@ public class AlamofireNetworkRequest : NetworkingRequest
     
     
     @discardableResult
-    func publishData() -> DataResponsePublisher<Data>
+    public func publishData() -> DataResponsePublisher<Data>
     {
         return alamofireRequest.publishData()
     }
     
     
     @discardableResult
-    func publishDecodable<T: Decodable>(type: T.Type) -> DataResponsePublisher<T>
+    public func publishDecodable<T: Decodable>(type: T.Type) -> DataResponsePublisher<T>
     {
         return alamofireRequest.publishDecodable()
     }

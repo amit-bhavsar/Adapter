@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol Navigable
+public protocol Navigable
 {
     associatedtype Navigator
     associatedtype Destination

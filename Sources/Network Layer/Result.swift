@@ -9,19 +9,19 @@
 import Foundation
 import Combine
 
-enum Resultable<T> {
+public enum Resultable<T> {
 
     case success(T)
     case failure(Error)
 
-    var value: T? {
+    public var value: T? {
         switch self {
         case let .success(value): return value
         default: return nil
         }
     }
     
-    var error: Error? {
+    public var error: Error? {
         switch self {
         case let .failure(error): return error
         default: return nil
@@ -30,7 +30,7 @@ enum Resultable<T> {
 }
 
 extension Resultable: Equatable where T: Equatable {
-    static func == (lhs: Resultable<T>, rhs: Resultable<T>) -> Bool {
+    public static func == (lhs: Resultable<T>, rhs: Resultable<T>) -> Bool {
         switch (lhs, rhs) {
         case let (.success(lhsV), .success(rhsV)): return lhsV == rhsV
         case let (.failure(lhsE), .failure(rhsE)):
@@ -42,7 +42,7 @@ extension Resultable: Equatable where T: Equatable {
 
 
 extension Publisher {
-    func sinkResult(_ result: @escaping (Resultable<Output>) -> Void) -> AnyCancellable {
+    public func sinkResult(_ result: @escaping (Resultable<Output>) -> Void) -> AnyCancellable {
         return sink(receiveCompletion: { completion in
             switch completion {
             case let .failure(error):
@@ -55,7 +55,7 @@ extension Publisher {
     }
     
     @discardableResult
-    func onSink(receiveValue: @escaping ((Self.Output) -> Void)) -> AnyCancellable
+    public func onSink(receiveValue: @escaping ((Self.Output) -> Void)) -> AnyCancellable
     {
         return sink(receiveCompletion: { _ in }, receiveValue: { value in
             receiveValue(value)
@@ -64,18 +64,18 @@ extension Publisher {
 }
 
 
-class CancelBag {
+public class CancelBag {
     var subscriptions = Set<AnyCancellable>()
 }
 
 extension AnyCancellable {
-    static var cancelled: AnyCancellable {
+    public static var cancelled: AnyCancellable {
         let cancellable = AnyCancellable({ })
         cancellable.cancel()
         return cancellable
     }
     
-    func store(in cancelBag: CancelBag) {
+    public func store(in cancelBag: CancelBag) {
         cancelBag.subscriptions.insert(self)
     }
 }
