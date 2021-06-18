@@ -44,7 +44,7 @@ public final class Webservice: WebServiceProtocol
     
     
     @discardableResult
-    public func call<T: Codable>(api route: Router, type: T.Type) -> AnyPublisher<T?, WebError>
+    public func call<T: Codable>(api route: Routable, type: T.Type) -> AnyPublisher<T?, WebError>
     {
         /*
         if no internet

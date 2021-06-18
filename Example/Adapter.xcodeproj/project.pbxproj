@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,24 @@
 		EA167918267C7E5200C218D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA167917267C7E5200C218D3 /* Assets.xcassets */; };
 		EA16791B267C7E5200C218D3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA16791A267C7E5200C218D3 /* Preview Assets.xcassets */; };
 		EA16791E267C7E5200C218D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA16791C267C7E5200C218D3 /* LaunchScreen.storyboard */; };
+		EAC6D784267CA01000043E3A /* WebError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC6D774267CA01000043E3A /* WebError.swift */; };
+		EAC6D785267CA01000043E3A /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC6D775267CA01000043E3A /* Networking.swift */; };
+		EAC6D786267CA01000043E3A /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC6D776267CA01000043E3A /* Result.swift */; };
+		EAC6D787267CA01000043E3A /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC6D777267CA01000043E3A /* Interactor.swift */; };
+		EAC6D788267CA01000043E3A /* WebServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC6D778267CA01000043E3A /* WebServiceProtocol.swift */; };
+		EAC6D789267CA01000043E3A /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC6D779267CA01000043E3A /* Webservice.swift */; };
+		EAC6D78A267CA01000043E3A /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC6D77A267CA01000043E3A /* Router.swift */; };
+		EAC6D78B267CA01000043E3A /* ABResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC6D77B267CA01000043E3A /* ABResponse.swift */; };
+		EAC6D78C267CA01000043E3A /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC6D77D267CA01000043E3A /* ViewState.swift */; };
+		EAC6D78D267CA01000043E3A /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC6D77E267CA01000043E3A /* ViewModelProtocol.swift */; };
+		EAC6D78E267CA01000043E3A /* StateFul.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC6D77F267CA01000043E3A /* StateFul.swift */; };
+		EAC6D78F267CA01000043E3A /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC6D780267CA01000043E3A /* API.swift */; };
+		EAC6D790267CA01000043E3A /* Adapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC6D781267CA01000043E3A /* Adapter.swift */; };
+		EAC6D791267CA01000043E3A /* Navigable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC6D782267CA01000043E3A /* Navigable.swift */; };
+		EAC6D792267CA01000043E3A /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC6D783267CA01000043E3A /* Navigator.swift */; };
+		EAC6D795267CA02500043E3A /* MovieListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC6D794267CA02500043E3A /* MovieListInteractor.swift */; };
+		EAC6D799267CA0AC00043E3A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = EAC6D798267CA0AC00043E3A /* Alamofire */; };
+		EAC6D79C267CA0C900043E3A /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC6D79B267CA0C900043E3A /* Movie.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +42,23 @@
 		EA16791A267C7E5200C218D3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EA16791D267C7E5200C218D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA16791F267C7E5200C218D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EAC6D774267CA01000043E3A /* WebError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebError.swift; sourceTree = "<group>"; };
+		EAC6D775267CA01000043E3A /* Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		EAC6D776267CA01000043E3A /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		EAC6D777267CA01000043E3A /* Interactor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
+		EAC6D778267CA01000043E3A /* WebServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServiceProtocol.swift; sourceTree = "<group>"; };
+		EAC6D779267CA01000043E3A /* Webservice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Webservice.swift; sourceTree = "<group>"; };
+		EAC6D77A267CA01000043E3A /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		EAC6D77B267CA01000043E3A /* ABResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ABResponse.swift; sourceTree = "<group>"; };
+		EAC6D77D267CA01000043E3A /* ViewState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
+		EAC6D77E267CA01000043E3A /* ViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelProtocol.swift; sourceTree = "<group>"; };
+		EAC6D77F267CA01000043E3A /* StateFul.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateFul.swift; sourceTree = "<group>"; };
+		EAC6D780267CA01000043E3A /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		EAC6D781267CA01000043E3A /* Adapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Adapter.swift; sourceTree = "<group>"; };
+		EAC6D782267CA01000043E3A /* Navigable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Navigable.swift; sourceTree = "<group>"; };
+		EAC6D783267CA01000043E3A /* Navigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
+		EAC6D794267CA02500043E3A /* MovieListInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieListInteractor.swift; sourceTree = "<group>"; };
+		EAC6D79B267CA0C900043E3A /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAC6D799267CA0AC00043E3A /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,7 +92,13 @@
 		EA167910267C7E5100C218D3 /* Adapter */ = {
 			isa = PBXGroup;
 			children = (
+				EAC6D772267CA01000043E3A /* Sources */,
 				EA167911267C7E5100C218D3 /* AppDelegate.swift */,
+				EAC6D79B267CA0C900043E3A /* Movie.swift */,
+				EAC6D777267CA01000043E3A /* Interactor.swift */,
+				EAC6D77A267CA01000043E3A /* Router.swift */,
+				EAC6D77B267CA01000043E3A /* ABResponse.swift */,
+				EAC6D794267CA02500043E3A /* MovieListInteractor.swift */,
 				EA167913267C7E5100C218D3 /* SceneDelegate.swift */,
 				EA167915267C7E5100C218D3 /* ContentView.swift */,
 				EA167917267C7E5200C218D3 /* Assets.xcassets */,
@@ -75,6 +117,42 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		EAC6D772267CA01000043E3A /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				EAC6D773267CA01000043E3A /* Network Layer */,
+				EAC6D77C267CA01000043E3A /* Protocols */,
+			);
+			name = Sources;
+			path = ../../Sources;
+			sourceTree = "<group>";
+		};
+		EAC6D773267CA01000043E3A /* Network Layer */ = {
+			isa = PBXGroup;
+			children = (
+				EAC6D774267CA01000043E3A /* WebError.swift */,
+				EAC6D775267CA01000043E3A /* Networking.swift */,
+				EAC6D776267CA01000043E3A /* Result.swift */,
+				EAC6D778267CA01000043E3A /* WebServiceProtocol.swift */,
+				EAC6D779267CA01000043E3A /* Webservice.swift */,
+			);
+			path = "Network Layer";
+			sourceTree = "<group>";
+		};
+		EAC6D77C267CA01000043E3A /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				EAC6D77D267CA01000043E3A /* ViewState.swift */,
+				EAC6D77E267CA01000043E3A /* ViewModelProtocol.swift */,
+				EAC6D77F267CA01000043E3A /* StateFul.swift */,
+				EAC6D780267CA01000043E3A /* API.swift */,
+				EAC6D781267CA01000043E3A /* Adapter.swift */,
+				EAC6D782267CA01000043E3A /* Navigable.swift */,
+				EAC6D783267CA01000043E3A /* Navigator.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -91,6 +169,9 @@
 			dependencies = (
 			);
 			name = Adapter;
+			packageProductDependencies = (
+				EAC6D798267CA0AC00043E3A /* Alamofire */,
+			);
 			productName = Adapter;
 			productReference = EA16790E267C7E5100C218D3 /* Adapter.app */;
 			productType = "com.apple.product-type.application";
@@ -118,6 +199,9 @@
 				Base,
 			);
 			mainGroup = EA167905267C7E5100C218D3;
+			packageReferences = (
+				EAC6D797267CA0AC00043E3A /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = EA16790F267C7E5100C218D3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -145,9 +229,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAC6D795267CA02500043E3A /* MovieListInteractor.swift in Sources */,
+				EAC6D78B267CA01000043E3A /* ABResponse.swift in Sources */,
+				EAC6D786267CA01000043E3A /* Result.swift in Sources */,
+				EAC6D78C267CA01000043E3A /* ViewState.swift in Sources */,
 				EA167912267C7E5100C218D3 /* AppDelegate.swift in Sources */,
+				EAC6D78F267CA01000043E3A /* API.swift in Sources */,
+				EAC6D78D267CA01000043E3A /* ViewModelProtocol.swift in Sources */,
+				EAC6D791267CA01000043E3A /* Navigable.swift in Sources */,
+				EAC6D78A267CA01000043E3A /* Router.swift in Sources */,
+				EAC6D785267CA01000043E3A /* Networking.swift in Sources */,
+				EAC6D78E267CA01000043E3A /* StateFul.swift in Sources */,
+				EAC6D790267CA01000043E3A /* Adapter.swift in Sources */,
+				EAC6D792267CA01000043E3A /* Navigator.swift in Sources */,
+				EAC6D784267CA01000043E3A /* WebError.swift in Sources */,
+				EAC6D79C267CA0C900043E3A /* Movie.swift in Sources */,
+				EAC6D788267CA01000043E3A /* WebServiceProtocol.swift in Sources */,
 				EA167914267C7E5100C218D3 /* SceneDelegate.swift in Sources */,
+				EAC6D787267CA01000043E3A /* Interactor.swift in Sources */,
 				EA167916267C7E5100C218D3 /* ContentView.swift in Sources */,
+				EAC6D789267CA01000043E3A /* Webservice.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +444,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EAC6D797267CA0AC00043E3A /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 5.4.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EAC6D798267CA0AC00043E3A /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EAC6D797267CA0AC00043E3A /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EA167906267C7E5100C218D3 /* Project object */;
 }

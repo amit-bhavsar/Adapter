@@ -18,7 +18,7 @@ open class Interactor
     }
     
     
-    public func call<T: Codable>(api route: Router, type: T.Type, completion: @escaping (Resultable<T>) -> Void)
+    public func call<T: Codable>(api route: Routable, type: T.Type, completion: @escaping (Resultable<T>) -> Void)
     {
         webService.call(api: route, type: ABResponse<T>.self).sinkResult { (result) in
             switch result {

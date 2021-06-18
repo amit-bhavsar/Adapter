@@ -12,14 +12,14 @@ import Combine
 public protocol WebServiceProtocol
 {
     @discardableResult
-    func call<T: Codable>(api route: Router, type: T.Type) -> AnyPublisher<T?, WebError>
+    func call<T: Codable>(api route: Routable, type: T.Type) -> AnyPublisher<T?, WebError>
 }
 
 
 extension WebServiceProtocol
 {
     @discardableResult
-    func call<T: Codable>(api route: Router, type: T.Type) -> AnyPublisher<T?, WebError>
+    func call<T: Codable>(api route: Routable, type: T.Type) -> AnyPublisher<T?, WebError>
     {
         return call(api: route, type: type)
     }
