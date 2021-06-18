@@ -10,11 +10,11 @@ let package = Package(
         .library(name: "Adapter",targets: ["Adapter"]),
     ],
     dependencies: [
-            .package(url: "https://github.com/Alamofire/Alamofire.git", .upToNextMinor(from: "5.4.3"))
+        .package(name: "Alamofire", url: "https://github.com/Alamofire/Alamofire.git", .upToNextMinor(from: "5.4.3"))
     ],
     targets: [
         .target(
-            name: "Adapter", path: "Sources")
+            name: "Adapter", dependencies: ["Alamofire"], path: "Sources")
     ],
     swiftLanguageVersions: [.v5]
 )
