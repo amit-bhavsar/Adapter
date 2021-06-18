@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol Adapter
+public protocol Adapter
 {
     associatedtype ViewModel where ViewModel : ViewModelProtocol
     var viewModel: ViewModel { get set }

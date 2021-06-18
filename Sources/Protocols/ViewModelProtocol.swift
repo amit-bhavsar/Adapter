@@ -6,8 +6,9 @@
 //
 
 import Foundation
+import SwiftUI
 
-protocol ViewModelProtocol: ObservableObject
+public protocol ViewModelProtocol: ObservableObject
 {
 }
 

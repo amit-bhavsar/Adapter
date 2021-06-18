@@ -37,10 +37,4 @@ extension View
             self
         }
     }
-    
-    func present<V>(_ view: V, with trigger: Binding<Bool>) -> some View where V : View {
-        self.fullScreenCover(isPresented: trigger) {
-            view
-        }
-    }
 }
