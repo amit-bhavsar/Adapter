@@ -31,6 +31,7 @@
 		EAC6D795267CA02500043E3A /* MovieListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC6D794267CA02500043E3A /* MovieListInteractor.swift */; };
 		EAC6D799267CA0AC00043E3A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = EAC6D798267CA0AC00043E3A /* Alamofire */; };
 		EAC6D79C267CA0C900043E3A /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC6D79B267CA0C900043E3A /* Movie.swift */; };
+		EAC6D7A6267CA37800043E3A /* Routable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC6D7A5267CA37800043E3A /* Routable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,7 @@
 		EAC6D783267CA01000043E3A /* Navigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
 		EAC6D794267CA02500043E3A /* MovieListInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieListInteractor.swift; sourceTree = "<group>"; };
 		EAC6D79B267CA0C900043E3A /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		EAC6D7A5267CA37800043E3A /* Routable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 				EAC6D776267CA01000043E3A /* Result.swift */,
 				EAC6D778267CA01000043E3A /* WebServiceProtocol.swift */,
 				EAC6D779267CA01000043E3A /* Webservice.swift */,
+				EAC6D7A5267CA37800043E3A /* Routable.swift */,
 			);
 			path = "Network Layer";
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EAC6D795267CA02500043E3A /* MovieListInteractor.swift in Sources */,
+				EAC6D7A6267CA37800043E3A /* Routable.swift in Sources */,
 				EAC6D78B267CA01000043E3A /* ABResponse.swift in Sources */,
 				EAC6D786267CA01000043E3A /* Result.swift in Sources */,
 				EAC6D78C267CA01000043E3A /* ViewState.swift in Sources */,
