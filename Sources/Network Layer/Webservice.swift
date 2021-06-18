@@ -24,21 +24,21 @@ public final class Webservice: WebServiceProtocol
         self.sessionManager = sessionManager
     }
     
-    static let api = Webservice.init()
+    public static let api = Webservice.init()
     
     /// Set Bearer Token here
     ///
     /// - parameter token: string without bearer prefix for `token`
-    func set(authorizeToken token: String) {
+    public func set(authorizeToken token: String) {
         header[""] = token
     }
     
     /// Remove Bearer token with this method
-    func removeAuthorizeToken() {
+    public func removeAuthorizeToken() {
         header.remove(name: "")
     }
     
-    func cancelAllTasks() {
+    public func cancelAllTasks() {
         sessionManager.cancelAllRequest()
     }
     

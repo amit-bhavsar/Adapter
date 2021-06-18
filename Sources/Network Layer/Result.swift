@@ -65,7 +65,9 @@ extension Publisher {
 
 
 public class CancelBag {
-    var subscriptions = Set<AnyCancellable>()
+    public var subscriptions = Set<AnyCancellable>()
+    
+    public init() {}
 }
 
 extension AnyCancellable {
