@@ -14,10 +14,7 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "Adapter", path: "Sources"),
-        .testTarget(
-            name: "AdapterTests",
-            dependencies: ["Adapter"]),
+            name: "Adapter", path: "Sources")
     ],
     swiftLanguageVersions: [.v5]
 )
