@@ -31,4 +31,4 @@ end
 ```
 
 ## Author
-### [Amit Bhavsar](amibhavsar@live.com)
+### [Amit Bhavsar](mailto:amibhavsar@live.com)
