@@ -35,7 +35,7 @@ public enum WebError: Error {
     case unknown
     
     
-    init(_ error: Error)
+    public init(_ error: Error)
     {
         if error._code == NSURLErrorTimedOut {
             self = .timeout
