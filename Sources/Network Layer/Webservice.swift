@@ -77,4 +77,35 @@ public final class Webservice: WebServiceProtocol
             return $0
         }.eraseToAnyPublisher()
     }
+    
+    
+    @discardableResult
+    public func callAwait<T: Codable>(api route: Routable, type: T.Type) async -> Result<T, AFError> {
+        
+        /*
+        if no internet
+        {
+         return WebError.noInternet
+        }
+        */
+        
+        let path = route.path.addingPercentEncoding(withAllowedCharacters:CharacterSet.urlQueryAllowed)
+        
+        var parameter = route.parameters
+        if route.parameters == nil {
+            parameter = [:]
+        }
+        
+        var encoding: ParameterEncoding = JSONEncoding.default
+        if route.method == .get {
+            encoding = URLEncoding.default
+        }
+        
+        let request = self.sessionManager.request(path!, method : route.method, parameters : parameter!, encoding : encoding, headers : self.header)
+        
+        let dataTask = request.serializingDecodable(T.self)
+
+        let result = await dataTask.result
+        return result
+    }
 }

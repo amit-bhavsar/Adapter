@@ -35,4 +35,20 @@ open class Interactor
             }
         }.store(in: cancelBag)
     }
+    
+    
+    public func callAwait<T: Codable>(api route: Routable, type: T.Type) async -> Resultable<T> {
+        let result = await webService.callAwait(api: route, type: ABResponse<T>.self)
+        
+        switch result {
+        case .failure(let error):
+            return .failure(WebError(error))
+        case .success(let response):
+            if let data = response.data {
+                return .success(data)
+            } else {
+                return .failure(WebError.unknown)
+            }
+        }
+    }
 }

@@ -13,6 +13,9 @@ public protocol WebServiceProtocol
 {
     @discardableResult
     func call<T: Codable>(api route: Routable, type: T.Type) -> AnyPublisher<T?, WebError>
+    
+    @discardableResult
+    func callAwait<T: Codable>(api route: Routable, type: T.Type) async -> Resultable<T>
 }
 
 
@@ -22,5 +25,10 @@ extension WebServiceProtocol
     func call<T: Codable>(api route: Routable, type: T.Type) -> AnyPublisher<T?, WebError>
     {
         return call(api: route, type: type)
+    }
+    
+    @discardableResult
+    public func callAwait<T: Codable>(api route: Routable, type: T.Type) async -> Resultable<T> {
+        return await callAwait(api: route, type: type)
     }
 }

@@ -30,6 +30,9 @@ public protocol NetworkingRequest
     
     @discardableResult
     func publishDecodable<T: Decodable>(type: T.Type) -> DataResponsePublisher<T>
+    
+    @discardableResult
+    func serializingDecodable<T: Decodable>(_ type: T.Type) -> DataTask<T>
 }
 
 
@@ -110,5 +113,11 @@ public class AlamofireNetworkRequest : NetworkingRequest
     public func publishDecodable<T: Decodable>(type: T.Type) -> DataResponsePublisher<T>
     {
         return alamofireRequest.publishDecodable()
+    }
+    
+    
+    @discardableResult
+    public func serializingDecodable<T: Decodable>(_ type: T.Type) -> DataTask<T> {
+        return alamofireRequest.serializingDecodable(T.self)
     }
 }
