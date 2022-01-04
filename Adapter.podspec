@@ -20,6 +20,6 @@ Pod::Spec.new do |spec|
   spec.source_files  = "Sources/**/*.{h,m,swift}"
   spec.exclude_files = "Example/*.*"
   spec.framework  = "Combine"
-  spec.dependency 'Alamofire', '~> 5.4.3'
+  spec.dependency 'Alamofire', '~> 5.5.0'
 
 end
